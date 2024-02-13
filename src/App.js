@@ -121,8 +121,8 @@ export default function App() {
         const dataX = await responseX.json();
         const dataY = await responseY.json();
         
-        console.log("Fetched X-axis data:", dataX);
-        console.log("Fetched Y-axis data:", dataY);
+        // console.log("Fetched X-axis data:", dataX);
+        // console.log("Fetched Y-axis data:", dataY);
   
         // Assuming both X and Y data have the same number of points and are ordered accordingly
         const combinedData = dataX.map((itemX, index) => ({
@@ -130,7 +130,7 @@ export default function App() {
           y: parseFloat(dataY[index].RandomNumber)
         }));
   
-        console.log("Combined data:", combinedData);
+        // console.log("Combined data:", combinedData);
   
 
         const combinedDataLimited = combinedData.slice(0, 50);
@@ -159,7 +159,7 @@ export default function App() {
   }, []);
   
 
-  console.log("Chart Data:", chartData); // Log chartData for debugging
+  // console.log("Chart Data:", chartData); // Log chartData for debugging
 
   return (
     <div className="App">
